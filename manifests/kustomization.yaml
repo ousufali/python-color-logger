@@ -4,14 +4,18 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
+  - secrets.yaml
 
 configMapGenerator:
   - name: custom-logger-config
     literals:
 
       - environment=production
+    options:
+      disableNameSuffixHash: true
+
 
 
 images:
   - name: PROJECT/IMAGE1
-    newName: ousufali/custom-logger:v5
+    newName: ousufali/custom-logger:v7

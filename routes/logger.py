@@ -3,9 +3,13 @@ from utils.page import html_content, home_html_content
 from utils.custom_logger import getLogger
 logger = getLogger()
 logger_blueprint = Blueprint('logger', __name__, url_prefix='/logger')
+import os
+
 
 @logger_blueprint.route('/')
 def index():
+    
+    logger.critical(f"SECRET_MESSAGE:  {os.getenv('SECRET_MESSAGE')}")
     return home_html_content
 
 

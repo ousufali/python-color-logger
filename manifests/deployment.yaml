@@ -15,3 +15,18 @@ spec:
       containers:
         - name: custom-logger
           image: PROJECT/IMAGE1
+      
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: 0.1m
+            limits:
+              memory: "200Mi"
+              cpu: 1m
+
+          env:
+            - name: SECRET_MESSAGE
+              valueFrom:
+                secretKeyRef:
+                  name: logger-secrets
+                  key: developer_message

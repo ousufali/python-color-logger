@@ -14,4 +14,4 @@ configMapGenerator:
 
 images:
   - name: PROJECT/IMAGE1
-    newName: ousufali/custom-logger:v4
+    newName: ousufali/custom-logger:v5

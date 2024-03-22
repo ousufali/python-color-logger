@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 # Define format for logs
-fmt = '%(asctime)s | %(levelname) -8s | %(name) -8s |  %(message)s'
+fmt = '%(asctime)s | %(levelname) -8s | %(funcName) -8s |  %(message)s'
 
 # Create stdout handler for logging to the console (logs all five levels)
 stdout_handler = logging.StreamHandler()
